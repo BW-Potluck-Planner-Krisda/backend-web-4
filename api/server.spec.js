@@ -2,11 +2,15 @@ const request = require('supertest');
 
 const server = require('./server');
 
-it('should set DB environment to testing', () => {
-  expect(process.env.DB_ENV).toBe('testing');
-});
+
 
 describe('server', () => {
+
+  it('should set DB environment to testing', () => {
+    expect(process.env.DB_ENV).toBe('testing');
+  });
+
+
   describe('GET /', () => {
     it('should return status code 200', () => {
       return request(server)

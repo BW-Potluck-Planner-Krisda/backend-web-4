@@ -4,16 +4,7 @@ const User = require("./user-model");
 const jwt = require('jsonwebtoken');
 const requiresAuth = require("./authenticate-middleware");
 
-function generateToken(user) {
-  const payload = {
-    username: user.username,
-    id: user.id,
-  };
-  const options = {
-    expiresIn: '1d',
-  };
-  return jwt.sign(payload, process.env.JWT_SECRET || 'lkajsdlkjaskldj', options);
-}
+
 
 router.post('/register', (req, res) => {
   // implement registration
