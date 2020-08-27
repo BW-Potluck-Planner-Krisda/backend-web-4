@@ -6,7 +6,7 @@ const UserPotlucks = require('../potlucks/user_potlucks_model');
 
 router.get('/all', (req, res) => {
 
-  // console.log(req.user.id);
+  console.log(req.user.id);
 
   User.findAllExpectId(req.user.id)
     .then(users => {
@@ -27,7 +27,7 @@ router.get('/organized', (req, res) => {
     })
     .catch(error => {
       console.log(error);
-      res.status(500).send({message: 'The databse could not get requested data.'});
+      res.status(500).send({message: 'The database could not get requested data.'});
     })
 });
 

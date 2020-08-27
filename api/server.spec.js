@@ -5,12 +5,9 @@ const server = require('./server');
 
 
 describe('server', () => {
-
-  it('should set DB environment to testing', () => {
-    expect(process.env.DB_ENV).toBe('testing');
+  it("runs the tests", function () {
+    expect(true).toBe("testing");
   });
-
-
   describe('GET /', () => {
     it('should return status code 200', () => {
       return request(server)
@@ -31,5 +28,3 @@ describe('server', () => {
     })
   })
 })
-
-

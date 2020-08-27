@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon index.js",
     "start": "node index.js",
-    "test": "cross-env DB_ENV=development jest --watch"
+    "test": "cross-env  jest --watch",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
