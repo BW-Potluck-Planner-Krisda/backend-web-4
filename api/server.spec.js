@@ -6,7 +6,7 @@ const server = require('./server');
 
 describe('server', () => {
   it("runs the tests", function () {
-    expect(true).toBe("testing");
+    expect(true).toBe(true);
   });
   describe('GET /', () => {
     it('should return status code 200', () => {
