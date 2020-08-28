@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
   if (token) {
     jwt.verify(
       token,
-      process.env.JWT_SECRET || "lkajsdlkjaskldj",
+      process.env.JWT_SECRET || "tktdiittuhatt",
       (err, decodedToken) => {
         if (err) {
           res.status(401).json({ message: "Token not valid" });
